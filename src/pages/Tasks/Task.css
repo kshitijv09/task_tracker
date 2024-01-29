@@ -37,14 +37,21 @@
 .sort-btn {
   color: green;
 }
-.sorting {
+.sort-filt {
   font-size: 2em;
   width: 70%;
   margin: auto;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
   border:red solid 1px;
+}
+
+.sort-cont{
+  display: flex;
+  border:aqua solid 1px;
+  justify-content: space-between;
+  width:20%;
 }
 
 .add-rem {

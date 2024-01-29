@@ -146,7 +146,16 @@ setTasks2(items)
         {modal && <AddTask onConfirm={modalHandler} />}
 
         <div className="rem-container">
-          <div className="sorting">
+          <div className="heading">
+            TASK - TRACKER
+          </div>
+          <div className="sort-filt">
+            <div className="sort-cont">
+              <div className="sort-txt">
+                SORT:
+              </div>
+           
+            <div className="sort-opt">
             <div
               className="sort-btn"
               id={selectedButton === "DueDate" ? "selected-btn" : ""}
@@ -165,6 +174,9 @@ setTasks2(items)
             >
               Status
             </div>
+            </div>
+            </div>
+            
             <div className="filtering">
             <div
               className="filter-btn"
