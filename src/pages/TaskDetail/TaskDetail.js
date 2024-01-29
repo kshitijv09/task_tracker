@@ -57,7 +57,7 @@ export default function TaskDetail(props) {
           </div>
         </div>
 
-        <div className="btn-container">
+        <div className="btn-container-2">
          {/*  <Button onClick={openComment} variant="success">
             Comment Section
           </Button> */}

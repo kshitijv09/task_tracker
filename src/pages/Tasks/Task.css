@@ -1,24 +1,28 @@
-.img-cont {
-  /* border: 8px solid #c8f2f2; */
-  height: 100vh;
+.image-cont {
+ /*  border: 8px solid #c8f2f2; */
+  height: 100%;
   width: 100% !important;
 
   /* overflow: hidden !important; */
-  position: relative;
-  background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
+  position: absolute;
+  background-color:#d2a295 ;
+  /* background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png"); */
 }
+
 .welcome-text {
   text-align: center;
 }
 .rem-container {
   width: 100%;
-  border:hotpink solid 2px;
+ /*  border:hotpink solid 2px; */
   height: 100vw;
-  background-image: url(https://www.transparenttextures.com/patterns/dirty-old-black-shirt.png);
+  background-color:#d2a295 ;
+ /*  background-image: url(https://www.transparenttextures.com/patterns/dirty-old-black-shirt.png); */
 }
 .task-head {
   display: flex;
   justify-content: center;
+  color:#dc0764;
 }
 .task-heading {
   font-size: 2em;
@@ -29,12 +33,13 @@
   justify-content: space-around;
 
   text-decoration: underline;
+  color:#dc0764;
 }
 
 #selected-btn {
   text-decoration: underline;
 }
-.sort-btn {
+.sort-btn,.filter-btn {
   color: green;
 }
 .sort-filt {
@@ -44,26 +49,35 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border:red solid 1px;
+ /*  border:red solid 1px; */
 }
 
 .sort-cont{
   display: flex;
-  border:aqua solid 1px;
+  /* border:aqua solid 1px; */
   justify-content: space-between;
   width:20%;
 }
-
+.filter-cont{
+  display: flex;
+  /* border:aqua solid 1px; */
+  justify-content: space-between;
+  width:25%;
+}
+.display-reminder{
+  background-color: #d2a295 ;
+}
 .add-rem {
   width: 30%;
   margin: auto;
   display: flex;
   justify-content: center;
+  /* background-color: #d2a295 ; */
 }
 .rem-btn {
   padding: 0.1px;
   font-size: 1.1em;
-  border: black solid 2px;
+ /*  border: black solid 2px; */
   border-radius: 20px;
   width: 30%;
   height: 5.5vw;
@@ -76,6 +90,16 @@
 }
 
 @media (max-width: 800px) {
+
+  .sort-cont,.filter-cont{
+    display: flex;
+    flex-direction: column;
+    border:aqua solid 1px;
+    justify-content: space-between;
+    width:20%;
+    font-size: 3.5vw;
+    margin-bottom: 10px;
+  }
   .task-head,
   .sort-btn {
     font-size: 3.5vw;
@@ -98,12 +122,30 @@
     width: 80%;
     height: 50%;
   }
+  .rem-container{
+    background-color:#d2a295 ;
+  }
+  .image-cont{
+    background-color:#d2a295 ;
+  }
+  #heading{
+    font-size: 50px;
+  }
 }
 @media (max-width: 830px) {
   .rem-btn {
     font-size: 4vw;
     width: 70%;
     height: 80%;
+  }
+  .rem-container{
+    background-color:#d2a295 ;
+  }
+  .image-cont{
+    background-color:#d2a295 ;
+  }
+  #heading{
+    font-size: 50px;
   }
   #creator {
     display: none;

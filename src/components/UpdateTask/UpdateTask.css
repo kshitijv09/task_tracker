@@ -1,10 +1,11 @@
 .add-container {
   color: black;
+  
 }
 
 .col-container {
   margin-top: 0.8em;
-  border: pink solid 2px;
+  /* border: pink solid 2px; */
 }
 .btn {
   margin-top: 1.2em;

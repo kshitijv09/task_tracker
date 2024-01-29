@@ -7,7 +7,7 @@
   align-items: center;
   justify-content: center;
   overflow: hidden !important;
-  position: relative;
+  position: absolute;
   background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
 }
 
@@ -25,19 +25,23 @@
 
 .update-container {
   width: 50%;
-  border: brown solid 2px;
+ /*  border: brown solid 2px; */
   display: flex;
   flex-direction: row;
+  height:100vh;
 }
 .t1 {
   width: 100%;
 }
-.btn-container {
+.btn-container-2 {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  /* border: blue solid 3px; */
+  justify-content: end;
+ /*  border: blue solid 3px; */
   width: 15%;
+  height:100%;
+  position: relative;
+  top:350px;
 }
 @media (max-width: 800px) {
   .page-container {
@@ -53,5 +57,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    
   }
+  /* .btn-container-2
+  {
+    
+  } */
 }

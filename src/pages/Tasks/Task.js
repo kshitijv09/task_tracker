@@ -76,8 +76,8 @@ export default function Reminder() {
     let filteredTasks;
     
     switch (filter) {
-        case 'Pending':
-            filteredTasks = tasks.filter(todo => todo.completed==='Pending');
+        case 'Incomplete':
+            filteredTasks = tasks.filter(todo => todo.completed==='Incomplete');
             break;
         case 'Completed':
             filteredTasks = tasks.filter(todo => todo.completed==='Completed');
@@ -142,11 +142,11 @@ setTasks2(items)
   return (
    
    
-      <div className="img-cont">
+      <div className="image-cont">
         {modal && <AddTask onConfirm={modalHandler} />}
 
         <div className="rem-container">
-          <div className="heading">
+          <div className="heading" id="heading">
             TASK - TRACKER
           </div>
           <div className="sort-filt">
@@ -177,7 +177,20 @@ setTasks2(items)
             </div>
             </div>
             
-            <div className="filtering">
+            <div className="filter-cont">
+              <div className="filter-txt">
+               FILTER:
+              </div>
+              <div className="filter-opt">
+              <div
+              className="filter-btn"
+              id={selectedButton === "All" ? "selected-btn" : ""}
+              onClick={() => {
+                filteringHandler("all");
+              }}
+            >
+            All
+            </div>
             <div
               className="filter-btn"
               id={selectedButton === "Completed" ? "selected-btn" : ""}
@@ -185,7 +198,7 @@ setTasks2(items)
                 filteringHandler("Completed");
               }}
             >
-            Completed
+              Completed
             </div>
             <div
               className="filter-btn"
@@ -196,15 +209,8 @@ setTasks2(items)
             >
               Incomplete
             </div>
-            <div
-              className="filter-btn"
-              id={selectedButton === "Incomplete" ? "selected-btn" : ""}
-              onClick={() => {
-                filteringHandler("all");
-              }}
-            >
-              All
-            </div>
+              </div>
+            
             </div>
           </div>
           <div className="task-heading">
